@@ -53,20 +53,20 @@ export const RESUME_DATA = {
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "University of Sussex",
+      degree: "Bachelor's Degree in Product Design",
+      start: "2018",
+      end: "2021",
     },
   ],
   work: [
     {
-      company: "Film.io",
+      company: "Box Bear",
       link: "https://film.io",
       badges: ["Remote"],
-      title: "Software Architect",
+      title: "Motion Graphic Designer",
       logo: ConsultlyLogo,
-      start: "2024",
+      start: "2022",
       end: null,
       description:
         "Leading the development of the Film.io platform. Technologies: React, TypeScript, Node.js",
