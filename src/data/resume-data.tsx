@@ -69,7 +69,7 @@ export const RESUME_DATA = {
     start: "2022",
     end: "2024",
     description:
-      "Delivered 3D animation projects for pharmaceuticals, EV and consumer goods companies, from concept development to final output. Designed and optimized 3D assets for seamless integration in VR and AR platforms. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and livestreams. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
+      "Delivered, from concept development to final output, 3D animation projects for pharmaceuticals, EV and consumer goods companies. Designed and optimized 3D assets for seamless integration in VR and AR platforms. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and livestream events. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
   },
     {
       company: "Freelance",
@@ -91,7 +91,7 @@ export const RESUME_DATA = {
       start: "2019",
       end: "2019",
       description:
-        "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes with an emphasis on environmental impact. Created illustrations and CAD models to reduce reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
+        "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes with an emphasis on environmental impact. Created illustrations and CAD models to reduce the reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
     },
     {
       company: "McLaren Applied",
@@ -106,7 +106,7 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
-    "Adobe Creative Suite",
+    "Adobe Suite",
     "Blender",
     "Cinema 4D",
     "JS/CSS",
