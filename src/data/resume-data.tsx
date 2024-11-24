@@ -69,18 +69,18 @@ export const RESUME_DATA = {
     start: "2022",
     end: "2024",
     description:
-      "Leading the development of the Film.io platform. Technologies: React, TypeScript, Node.js",
+      "Delivered 3D animation projects for pharmaceuticals, EV and consumer goods companies, from concept development to final output. Designed and optimized 3D assets for seamless integration in VR and AR platforms. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and livestreams. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
   },
     {
       company: "Freelance",
       link: "https://parabol.co",
       badges: ["Remote"],
-      title: "Senior Full Stack Developer",
+      title: "2D & 3D Designer",
       logo: ParabolLogo,
       start: "2021",
       end: null,
       description:
-        "Implemented new features, led a squad, improved code delivery process, and initiated migration from Emotion to Tailwind CSS. Technologies: React, TypeScript, GraphQL",
+        "Independently managed freelance projects. Executed company rebrands and generated relevant brand guidelines. Created 2D logo animations and 3D motion graphics for global clients. Technologies: After Effects, Blender, DaVinci Resolve",
     },
     {
       company: "DNC UK Limited",
@@ -91,32 +91,32 @@ export const RESUME_DATA = {
       start: "2019",
       end: "2019",
       description:
-        "Created Android mobile apps and led teams for companies like Vision Media, DKMS, and AAA. Built a live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
+        "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes with an emphasis on environmental impact. Created illustrations and CAD models to reduce reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
     },
     {
-      company: "McLaren Applied Technology",
-      link: "https://bsgroup.eu/",
+      company: "McLaren Applied",
+      link: "https://mclarenapplied.com/",
       badges: [],
       title: "Design Intern",
       logo: JojoMobileLogo,
       start: "2018",
       end: "2018",
       description:
-        "Led the Android team and developed apps for major Polish companies like LOT, Polskie Radio, Agora, and PolskaPress",
+        "Assessed how McLaren Applied Technology could be integrated into partner products to enhance the brand. Presented design ideas and proof-of-concept solutions during weekly meetings. Shared final findings with the Marketing Director and team.",
     },
   ],
   skills: [
-    "JavaScript",
-    "TypeScript",
-    "React/Next.js/Remix",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "WebRTC",
+    "Adobe Creative Suite",
+    "Blender",
+    "Cinema 4D",
+    "JS/CSS",
+    "DaVinci Resolve",
+    "Unreal Engine",
+    "VR/AR",
   ],
   projects: [
     {
-      title: "Parabol",
+      title: "Astrazeneca",
       techStack: [
         "Full Stack Developer",
         "TypeScript",
@@ -133,7 +133,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Evercast",
+      title: "Ubitricity",
       techStack: [
         "Lead Frontend Developer",
         "TypeScript",
@@ -150,7 +150,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Consultly",
+      title: "Evosite",
       techStack: [
         "Side Project",
         "TypeScript",
@@ -167,7 +167,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Monito",
+      title: "dstillery",
       techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
       description:
         "Browser extension that records everything happening in a web application",
@@ -178,7 +178,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Jarocki.me",
+      title: "Contrast Security",
       techStack: ["Side Project", "Next.js", "MDX"],
       description:
         "Personal website and blog. Built with Next.js and Notion API",
@@ -189,7 +189,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Minimal",
+      title: "Varietal",
       techStack: ["Side Project", "Next.js", "Puppeteer"],
       description:
         "Minimalist calendars, habit trackers, and planners generator",
@@ -198,80 +198,6 @@ export const RESUME_DATA = {
         label: "useminimal.com",
         href: "https://useminimal.com/",
       },
-    },
-    {
-      title: "Barepapers",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
-      description:
-        "Generates beautiful wallpapers using random shapes and gradients",
-      logo: BarepapersLogo,
-      link: {
-        label: "barepapers.com",
-        href: "https://barepapers.com/",
-      },
-    },
-    {
-      title: "Year progress",
-      techStack: ["Side Project", "TypeScript", "Next.js"],
-      description: "Tracks current year progress and displays a countdown",
-      logo: YearProgressLogo,
-      link: {
-        label: "getyearprogress.com",
-        href: "https://getyearprogress.com/",
-      },
-    },
-    {
-      title: "Mobile Vikings",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for leading virtual mobile operator in Poland",
-      logo: MobileVikingsLogo,
-      link: {
-        label: "mobilevikings.pl",
-        href: "https://mobilevikings.pl/",
-      },
-    },
-    {
-      title: "Howdy",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description: "Howdy is a place for joining communities you care about",
-      logo: Howdy,
-      link: {
-        label: "play.google.com",
-        href: "https://howdy.co/",
-      },
-    },
-    {
-      title: "Tastycloud",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for managing and displaying restaurant menus in kiosk mode",
-      logo: TastyCloudLogo,
-      link: {
-        label: "tastycloud.fr",
-        href: "https://www.tastycloud.fr/",
-      },
-    },
-    {
-      title: "Ambit",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with sharing your contact details",
-      logo: AmbitLogo,
-    },
-    {
-      title: "Bim",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with booking a table in a restaurants",
-      logo: BimLogo,
-    },
-    {
-      title: "Canal Digital GO",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Video streaming mobile application for Canal Digital subscribers",
-      logo: CDGOLogo,
     },
   ],
 } as const;
