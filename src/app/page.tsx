@@ -29,6 +29,7 @@ export default function Page() {
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={RESUME_DATA.locationLink}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <GlobeIcon className="size-3" />
                 {RESUME_DATA.location}
@@ -67,7 +68,11 @@ export default function Page() {
                   size="icon"
                   asChild
                 >
-                  <a href={social.url}>
+                  <a
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <social.icon className="size-4" />
                   </a>
                 </Button>
@@ -106,10 +111,14 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
+                      <a
+                        className="hover:underline"
+                        href={work.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {work.company}
                       </a>
-
                       <span className="inline-flex gap-x-1">
                         {work.badges.map((badge) => (
                           <Badge
