@@ -25,28 +25,28 @@ export const RESUME_DATA = {
   location: "London, England",
   locationLink: "https://www.google.com/maps/place/Wrocław",
   about:
-    "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
+    "Detail-oriented Motion Graphic Designer dedicated to creating high-quality animations and virtual experiences.",
   summary:
-    "As a Full Stack Engineer, I specialize in taking products from concept to launch. I excel in leading teams and creating environments where individuals perform at their best. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience working remotely with companies worldwide.",
+    "As a Motion Graphic Designer, I specialize in taking projects from concept to launch. I excel in collaborative team settings and deliver high-quality work independently. Currently, I work primarily with Adobe, Cinema 4D, Blender, JS/CSS and Unreal Engine. I have 4 years of experience working in person and remotely with companies worldwide.",
   avatarUrl: "https://raw.githubusercontent.com/seanderham1/cv-section/refs/heads/main/src/images/logos/profile-cv.jpg",
-  personalWebsiteUrl: "https://jarocki.me",
+  personalWebsiteUrl: "https://seanderham.com",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "seanderham@hotmail.com",
+    tel: "+447775692249",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/seanderham1",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://uk.linkedin.com/in/seanderham",
         icon: LinkedInIcon,
       },
       {
         name: "X",
-        url: "https://x.com/BartoszJarocki",
+        url: "https://twitter.com/seanderham",
         icon: XIcon,
       },
     ],
@@ -54,7 +54,7 @@ export const RESUME_DATA = {
   education: [
     {
       school: "University of Sussex",
-      degree: "Bachelor's Degree in Product Design",
+      degree: "First Class Bachelor's Degree in Product Design",
       start: "2018",
       end: "2021",
     },
@@ -62,57 +62,47 @@ export const RESUME_DATA = {
   work: [
     {
       company: "Box Bear",
-      link: "https://film.io",
-      badges: ["Remote"],
+      link: "https://boxbear.co.uk/",
+      badges: [],
       title: "Motion Graphic Designer",
       logo: ConsultlyLogo,
       start: "2022",
-      end: null,
+      end: "2024",
       description:
         "Leading the development of the Film.io platform. Technologies: React, TypeScript, Node.js",
     },
     {
-      company: "Parabol",
+      company: "Freelance",
       link: "https://parabol.co",
       badges: ["Remote"],
       title: "Senior Full Stack Developer",
       logo: ParabolLogo,
       start: "2021",
-      end: "2024",
+      end: null,
       description:
         "Implemented new features, led a squad, improved code delivery process, and initiated migration from Emotion to Tailwind CSS. Technologies: React, TypeScript, GraphQL",
     },
     {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote"],
-      title: "Lead Android Developer → Full Stack Developer",
+      company: "DNC UK Limited",
+      link: "https://www.dnc-uk.com/",
+      badges: [],
+      title: "Product Designer",
       logo: ClevertechLogo,
-      start: "2015",
-      end: "2021",
+      start: "2019",
+      end: "2019",
       description:
         "Created Android mobile apps and led teams for companies like Vision Media, DKMS, and AAA. Built a live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
     },
     {
-      company: "Jojo Mobile",
+      company: "McLaren Applied Technology",
       link: "https://bsgroup.eu/",
       badges: [],
-      title: "Android Developer → Lead Android Developer",
+      title: "Design Intern",
       logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
+      start: "2018",
+      end: "2018",
       description:
         "Led the Android team and developed apps for major Polish companies like LOT, Polskie Radio, Agora, and PolskaPress",
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: [],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description: "Developed and tested software for LTE base stations",
     },
   ],
   skills: [
