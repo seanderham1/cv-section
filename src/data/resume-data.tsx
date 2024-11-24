@@ -61,15 +61,19 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "Box Bear",
-      link: "https://boxbear.co.uk/",
-      badges: [],
-      title: "Motion Graphic Designer",
-      logo: ConsultlyLogo,
-      start: "2022",
-      end: "2024",
-      description:
-        "Leading the development of the Film.io platform. Technologies: React, TypeScript, Node.js",
+    company: "Box Bear",
+    link: (
+      <a href="https://boxbear.co.uk/" target="_blank" rel="noopener noreferrer">
+        https://boxbear.co.uk/
+      </a>
+    ),
+    badges: [],
+    title: "Motion Graphic Designer",
+    logo: ConsultlyLogo,
+    start: "2022",
+    end: "2024",
+    description:
+      "Leading the development of the Film.io platform. Technologies: React, TypeScript, Node.js",
     },
     {
       company: "Freelance",
