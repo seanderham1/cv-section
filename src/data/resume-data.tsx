@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   about:
     "Detail-oriented Motion Graphic Designer dedicated to creating high-quality animations and virtual experiences.",
   summary:
-    "As a Motion Graphic Designer, I specialize in taking projects from concept to launch. I excel in collaborative team settings and deliver high-quality work independently. Currently, I work primarily with Adobe, Cinema 4D, Blender, JS/CSS and Unreal Engine. I have 4 years of experience working in person and remotely with companies worldwide.",
+    "As a Motion Graphic Designer, I am driven by taking projects from concept to launch. I excel in collaborative team settings and deliver high-quality work independently. I work primarily with Adobe Suite, Blender, Cinema 4D, JS/CSS and Unreal Engine. I have four years of experience working in person and remotely with companies worldwide.",
   avatarUrl: "https://raw.githubusercontent.com/seanderham1/cv-section/refs/heads/main/src/images/logos/profile-cv.jpg",
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
@@ -69,7 +69,7 @@ export const RESUME_DATA = {
     start: "2022",
     end: "2024",
     description:
-      "Delivered, from concept development to final output, 3D animation projects for pharmaceuticals, EV and consumer goods companies. Designed and optimized 3D assets for seamless integration in VR and AR platforms. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and livestreaming. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
+      "Delivered 3D animation projects for pharmaceuticals, EV, and consumer goods companies with continuous input across all stages, from development to output. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and live streaming. Designed and optimised 3D assets for VR and AR platforms. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
   },
     {
       company: "Freelance",
@@ -80,7 +80,7 @@ export const RESUME_DATA = {
       start: "2021",
       end: null,
       description:
-        "Independently managed freelance projects. Executed company rebrands and generated relevant brand guidelines. Created 2D logo animations and 3D motion graphics for global clients. Technologies: After Effects, Blender, DaVinci Resolve",
+        "Independently source and manage freelance projects, building strong client relationships through effective communication and attention to detail. Execute company rebrands and generate relevant brand guidelines. Create 2D logo animations and 3D motion graphics for global clients. Technologies: After Effects, Blender, DaVinci Resolve",
     },
     {
       company: "DNC UK Limited",
@@ -91,7 +91,7 @@ export const RESUME_DATA = {
       start: "2019",
       end: "2019",
       description:
-        "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes with an emphasis on environmental impact. Created illustrations and CAD models to reduce the reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
+        "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes. Created illustrations and CAD models to reduce the reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
     },
     {
       company: "McLaren Applied",
@@ -102,7 +102,7 @@ export const RESUME_DATA = {
       start: "2018",
       end: "2018",
       description:
-        "Assessed how McLaren Applied Technology could be integrated into partner products to enhance the brand. Presented design ideas and proof-of-concept solutions during weekly meetings. Shared final findings with the Marketing Director and team.",
+        "Assessed how McLaren Applied technology could be integrated into partner products to drive innovation. Presented solutions during weekly meetings. Gathered insights and analytics and delivered findings with the Marketing Director and team.",
     },
   ],
   skills: [
