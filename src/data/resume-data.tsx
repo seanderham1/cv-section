@@ -118,14 +118,13 @@ export const RESUME_DATA = {
     {
       title: "Astrazeneca",
       techStack: [
-        "Full Stack Developer",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
+        "Blender",
+        "Premiere Pro",
+        "iClone",
+        "Character Creator",
       ],
       description:
-        "The Agile meeting co-pilot that delivers better meetings with less effort",
+        "Animation for ONDEXXYA, illustrating its solution for life-threatening bleeding",
       logo: ParabolLogo,
       link: {
         label: "github.com",
@@ -135,14 +134,12 @@ export const RESUME_DATA = {
     {
       title: "Ubitricity",
       techStack: [
-        "Lead Frontend Developer",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
+        "Cinema 4D",
+        "Premiere Pro",
+        "After Effects",
       ],
       description:
-        "Creative collaboration platform that combines video conferencing and HD media streaming",
+        "Video showcasing Ubitricity’s innovative urban EV charging solutions",
       logo: EvercastLogo,
       link: {
         label: "evercast.us",
@@ -152,14 +149,11 @@ export const RESUME_DATA = {
     {
       title: "Evosite",
       techStack: [
-        "Side Project",
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
+        "Blender",
+        "Premiere Pro",
+        "After Effects",
       ],
-      description: "A platform to build and grow your online business",
+      description: "Dynamic animation for Evo Agency’s brand overhaul, highlighting digital solutions",
       logo: ConsultlyLogo,
       link: {
         label: "consultly.com",
@@ -168,9 +162,9 @@ export const RESUME_DATA = {
     },
     {
       title: "dstillery",
-      techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
+      techStack: ["After Effects", "Illustrator"],
       description:
-        "Browser extension that records everything happening in a web application",
+        "Logo animation reinforcing Dstillery's AI-powered audience targeting",
       logo: MonitoLogo,
       link: {
         label: "monito.dev",
@@ -179,9 +173,9 @@ export const RESUME_DATA = {
     },
     {
       title: "Contrast Security",
-      techStack: ["Side Project", "Next.js", "MDX"],
+      techStack: ["Premiere Pro", "Blender", "After Effects"],
       description:
-        "Personal website and blog. Built with Next.js and Notion API",
+        "Video featuring a senior team to highlight security innovations",
       logo: JarockiMeLogo,
       link: {
         label: "github.com",
@@ -190,9 +184,9 @@ export const RESUME_DATA = {
     },
     {
       title: "Varietal",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
+      techStack: ["Personal Project", "Blender"],
       description:
-        "Minimalist calendars, habit trackers, and planners generator",
+        "Animated journey of the Varietal armchair, showcasing modern design and craftsmanship",
       logo: Minimal,
       link: {
         label: "useminimal.com",
