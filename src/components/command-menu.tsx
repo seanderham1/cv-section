@@ -21,45 +21,38 @@ interface Props {
 export const CommandMenu = ({ links }: Props) => {
   const [open, setOpen] = React.useState(false);
 
+  // Enhanced keyboard listener
   React.useEffect(() => {
-    const down = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        setOpen((open) => !open);
+        if (document.activeElement?.tagName !== "INPUT" && document.activeElement?.tagName !== "TEXTAREA") {
+          e.preventDefault();
+          setOpen((prevOpen) => !prevOpen);
+        }
       }
     };
 
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   return (
     <>
-      {/* Footer Command Hint */}
-      {process.env.NODE_ENV !== "production" && (
-        <p
-          className="fixed bottom-0 left-0 right-0 border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground print:hidden xl:block"
-          style={{ display: open ? "none" : "block" }} // Fully remove from layout when open
-        >
-          Press{" "}
-          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">⌘</span>J
-          </kbd>{" "}
-          to open the command menu
-        </p>
-      )}
-
-      {/* Floating Command Menu Button */}
+      <p className="fixed bottom-0 left-0 right-0 hidden border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground print:hidden xl:block">
+        Press{" "}
+        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+          <span className="text-xs">⌘</span>J
+        </kbd>{" "}
+        to open the command menu
+      </p>
       <Button
-        onClick={() => setOpen((open) => !open)}
+        onClick={() => setOpen((prevOpen) => !prevOpen)}
         variant="outline"
         size="icon"
         className="fixed bottom-4 right-4 flex rounded-full shadow-2xl print:hidden xl:hidden"
       >
         <CommandIcon className="my-6 size-6" />
       </Button>
-
-      {/* Command Dialog */}
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
