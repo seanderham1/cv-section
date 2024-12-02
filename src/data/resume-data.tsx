@@ -83,7 +83,7 @@ export const RESUME_DATA = {
     "Unreal Engine",
     "VR/AR",
   ],
-  projects: [
+ projects: [
     {
       title: "Astrazeneca",
       techStack: [
@@ -100,7 +100,68 @@ export const RESUME_DATA = {
         href: "https://parabol.co/",
       },
     },
-    // Other projects...
+    {
+      title: "Ubitricity",
+      techStack: [
+        "Cinema 4D",
+        "Premiere Pro",
+        "After Effects",
+      ],
+      description:
+        "Video showcasing Ubitricity’s innovative urban EV charging solutions",
+      logo: EvercastLogo,
+      link: {
+        label: "evercast.us",
+        href: "https://www.evercast.us/",
+      },
+    },
+    {
+      title: "Evosite",
+      techStack: [
+        "Blender",
+        "Premiere Pro",
+        "After Effects",
+      ],
+      description: "Dynamic animation for Evo Agency’s brand overhaul, highlighting digital solutions",
+      logo: ConsultlyLogo,
+      link: {
+        label: "consultly.com",
+        href: "https://consultly.com/",
+      },
+    },
+    {
+      title: "dstillery",
+      techStack: ["After Effects", "Illustrator"],
+      description:
+        "Logo animation reinforcing Dstillery's AI-powered audience targeting",
+      logo: MonitoLogo,
+      link: {
+        label: "monito.dev",
+        href: "https://monito.dev/",
+      },
+    },
+    {
+      title: "Contrast Security",
+      techStack: ["Blender", "Premiere Pro", "After Effects"],
+      description:
+        "Video featuring a senior team to highlight security innovations",
+      logo: JarockiMeLogo,
+      link: {
+        label: "github.com",
+        href: "https://jarocki.me/",
+      },
+    },
+    {
+      title: "Varietal",
+      techStack: ["Personal Project", "Blender"],
+      description:
+        "Animated journey of the Varietal armchair, showcasing modern design and craftsmanship",
+      logo: Minimal,
+      link: {
+        label: "useminimal.com",
+        href: "https://useminimal.com/",
+      },
+    },
   ],
 } as const;
 
