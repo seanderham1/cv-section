@@ -200,7 +200,7 @@ export default function Page() {
         </Section>
       </section>
 
-      <CommandMenu
+      {/*<CommandMenu
         links={[
           {
             url: RESUME_DATA.personalWebsiteUrl,
@@ -211,7 +211,7 @@ export default function Page() {
             title: socialMediaLink.name,
           })),
         ]}
-      />
+      />*/}
     </main>
   );
 }
