@@ -18,6 +18,7 @@ import {
   YearProgressLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { useEffect } from "react";
 
 export const RESUME_DATA = {
   name: "Sean Derham",
@@ -60,17 +61,17 @@ export const RESUME_DATA = {
     },
   ],
   work: [
-  {
-    company: "Box Bear",
-    link: "https://boxbear.co.uk/",
-    badges: [],
-    title: "Motion Graphic Designer",
-    logo: ConsultlyLogo,
-    start: "2022",
-    end: "2024",
-    description:
-      "Delivered 3D animation projects for pharmaceuticals, EV, and consumer goods companies with continuous input across all stages, from development to output. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and live streaming. Designed and optimised 3D assets for VR and AR platforms. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
-  },
+    {
+      company: "Box Bear",
+      link: "https://boxbear.co.uk/",
+      badges: [],
+      title: "Motion Graphic Designer",
+      logo: ConsultlyLogo,
+      start: "2022",
+      end: "2024",
+      description:
+        "Delivered 3D animation projects for pharmaceuticals, EV, and consumer goods companies with continuous input across all stages, from development to output. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and live streaming. Designed and optimised 3D assets for VR and AR platforms. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
+    },
     {
       company: "Freelance",
       link: "https://parabol.co",
@@ -140,10 +141,11 @@ export const RESUME_DATA = {
       ],
       description:
         "Video showcasing Ubitricity’s innovative urban EV charging solutions",
-      logo: EvercastLogo,
-      link: {
-        label: "evercast.us",
-        href: "https://www.evercast.us/",
+        logo: EvercastLogo,
+        link: {
+          label: "evercast.us",
+          href: "https://www.evercast.us/",
+        },
       },
     },
     {
@@ -195,3 +197,35 @@ export const RESUME_DATA = {
     },
   ],
 } as const;
+
+const ResumeData = () => {
+  useEffect(() => {
+    // Function to send the document's height to the parent window
+    const sendHeightToParent = () => {
+      const height = document.body.scrollHeight; // Get the full height of the content
+      window.parent.postMessage({ type: 'iframeHeight', height }, '*'); // Send the height to the parent window
+    };
+
+    // Call the function once the component is mounted
+    sendHeightToParent();
+
+    // Optionally, listen for window resize and update the height dynamically
+    window.addEventListener('resize', sendHeightToParent);
+
+    // Cleanup event listener when component unmounts
+    return () => {
+      window.removeEventListener('resize', sendHeightToParent);
+    };
+  }, []); // Run this effect only once, when the component is first rendered
+
+  return (
+    <div>
+      {/* Your CV content */}
+      <h1>{RESUME_DATA.name}</h1>
+      <p>{RESUME_DATA.about}</p>
+      {/* More CV content */}
+    </div>
+  );
+};
+
+export default ResumeData;
