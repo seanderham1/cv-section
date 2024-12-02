@@ -107,15 +107,18 @@ export const RESUME_DATA = {
 // postMessage functionality to dynamically adjust iframe height
 if (typeof window !== "undefined") {
   window.addEventListener("load", () => {
-    const iframe = document.querySelector('iframe.cv-iframe'); // Ensure the iframe has the correct class or ID
+    const iframe = document.querySelector('iframe.cv-iframe') as HTMLIFrameElement; // Cast to HTMLIFrameElement
     if (iframe) {
       iframe.onload = () => {
-        const height = iframe.contentWindow.document.body.scrollHeight;
-        window.parent.postMessage({ type: "iframeHeight", height }, "*");
+        const height = iframe.contentWindow?.document.body.scrollHeight;
+        if (height) {
+          window.parent.postMessage({ type: "iframeHeight", height }, "*");
+        }
       };
     }
   });
 }
+
 
 // Exporting ResumeData component
 const ResumeData = () => {
