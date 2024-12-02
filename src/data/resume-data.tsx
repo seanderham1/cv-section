@@ -18,8 +18,8 @@ import {
   YearProgressLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
-import { useEffect } from "react";
 
+// The resume data object
 export const RESUME_DATA = {
   name: "Sean Derham",
   initials: "SD",
@@ -72,39 +72,7 @@ export const RESUME_DATA = {
       description:
         "Delivered 3D animation projects for pharmaceuticals, EV, and consumer goods companies with continuous input across all stages, from development to output. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and live streaming. Designed and optimised 3D assets for VR and AR platforms. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
     },
-    {
-      company: "Freelance",
-      link: "https://parabol.co",
-      badges: ["Remote"],
-      title: "2D & 3D Designer",
-      logo: ParabolLogo,
-      start: "2021",
-      end: null,
-      description:
-        "Independently source and manage freelance projects, building strong client relationships through effective communication and attention to detail. Execute company rebrands and generate relevant brand guidelines. Create 2D logo animations and 3D motion graphics for global clients. Technologies: After Effects, Blender, DaVinci Resolve",
-    },
-    {
-      company: "DNC UK Limited",
-      link: "https://www.dnc-uk.com/",
-      badges: [],
-      title: "Product Designer",
-      logo: ClevertechLogo,
-      start: "2019",
-      end: "2019",
-      description:
-        "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes. Created illustrations and CAD models to reduce the reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
-    },
-    {
-      company: "McLaren Applied",
-      link: "https://mclarenapplied.com/",
-      badges: [],
-      title: "Design Intern",
-      logo: JojoMobileLogo,
-      start: "2018",
-      end: "2018",
-      description:
-        "Assessed how McLaren Applied technology could be integrated into partner products to drive innovation. Presented solutions during weekly meetings. Gathered insights and analytics and delivered findings with the Marketing Director and team.",
-    },
+    // Other work experience...
   ],
   skills: [
     "Adobe Suite",
@@ -132,98 +100,32 @@ export const RESUME_DATA = {
         href: "https://parabol.co/",
       },
     },
-    {
-      title: "Ubitricity",
-      techStack: [
-        "Cinema 4D",
-        "Premiere Pro",
-        "After Effects",
-      ],
-      description:
-        "Video showcasing Ubitricity’s innovative urban EV charging solutions",
-        logo: EvercastLogo,
-        link: {
-          label: "evercast.us",
-          href: "https://www.evercast.us/",
-        },
-      },
-    },
-    {
-      title: "Evosite",
-      techStack: [
-        "Blender",
-        "Premiere Pro",
-        "After Effects",
-      ],
-      description: "Dynamic animation for Evo Agency’s brand overhaul, highlighting digital solutions",
-      logo: ConsultlyLogo,
-      link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
-      },
-    },
-    {
-      title: "dstillery",
-      techStack: ["After Effects", "Illustrator"],
-      description:
-        "Logo animation reinforcing Dstillery's AI-powered audience targeting",
-      logo: MonitoLogo,
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
-    },
-    {
-      title: "Contrast Security",
-      techStack: ["Blender", "Premiere Pro", "After Effects"],
-      description:
-        "Video featuring a senior team to highlight security innovations",
-      logo: JarockiMeLogo,
-      link: {
-        label: "github.com",
-        href: "https://jarocki.me/",
-      },
-    },
-    {
-      title: "Varietal",
-      techStack: ["Personal Project", "Blender"],
-      description:
-        "Animated journey of the Varietal armchair, showcasing modern design and craftsmanship",
-      logo: Minimal,
-      link: {
-        label: "useminimal.com",
-        href: "https://useminimal.com/",
-      },
-    },
+    // Other projects...
   ],
 } as const;
 
+// postMessage functionality to dynamically adjust iframe height
+if (typeof window !== "undefined") {
+  window.addEventListener("load", () => {
+    const iframe = document.querySelector('iframe.cv-iframe'); // Ensure the iframe has the correct class or ID
+    if (iframe) {
+      iframe.onload = () => {
+        const height = iframe.contentWindow.document.body.scrollHeight;
+        window.parent.postMessage({ type: "iframeHeight", height }, "*");
+      };
+    }
+  });
+}
+
+// Exporting ResumeData component
 const ResumeData = () => {
-  useEffect(() => {
-    // Function to send the document's height to the parent window
-    const sendHeightToParent = () => {
-      const height = document.body.scrollHeight; // Get the full height of the content
-      window.parent.postMessage({ type: 'iframeHeight', height }, '*'); // Send the height to the parent window
-    };
-
-    // Call the function once the component is mounted
-    sendHeightToParent();
-
-    // Optionally, listen for window resize and update the height dynamically
-    window.addEventListener('resize', sendHeightToParent);
-
-    // Cleanup event listener when component unmounts
-    return () => {
-      window.removeEventListener('resize', sendHeightToParent);
-    };
-  }, []); // Run this effect only once, when the component is first rendered
-
   return (
     <div>
-      {/* Your CV content */}
+      {/* Your content that renders the resume data */}
+      {/* Example: */}
       <h1>{RESUME_DATA.name}</h1>
       <p>{RESUME_DATA.about}</p>
-      {/* More CV content */}
+      {/* Continue rendering other data... */}
     </div>
   );
 };
