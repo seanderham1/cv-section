@@ -23,11 +23,11 @@ export const RESUME_DATA = {
   name: "Sean Derham",
   initials: "SD",
   location: "London, England",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  locationLink: "https://www.google.com/maps/place/London",
   about:
     "Detail-oriented Motion Graphic Designer dedicated to creating high-quality animations and virtual experiences.",
   summary:
-    "As a Motion Graphic Designer, I am driven by taking projects from concept to launch. I excel in collaborative team settings and deliver high-quality work independently. I work primarily with Adobe Suite, Blender, Cinema 4D, JS/CSS and Unreal Engine. I have four years of experience working in person and remotely with companies worldwide.",
+    "As a Motion Graphic Designer, I am motivated by taking projects from concept to launch. I excel in collaborative team settings and deliver high-quality work independently. I work primarily with Adobe Suite, Blender, Cinema 4D, JS/CSS and Unreal Engine. I have four years of experience working in person and remotely with companies worldwide.",
   avatarUrl: "https://raw.githubusercontent.com/seanderham1/cv-section/refs/heads/main/src/images/logos/profile-cv.jpg",
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
@@ -173,7 +173,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Contrast Security",
-      techStack: ["Premiere Pro", "Blender", "After Effects"],
+      techStack: ["Blender", "Premiere Pro", "After Effects"],
       description:
         "Video featuring a senior team to highlight security innovations",
       logo: JarockiMeLogo,
