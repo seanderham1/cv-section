@@ -61,18 +61,50 @@ export const RESUME_DATA = {
     },
   ],
   work: [
+  {
+    company: "Box Bear",
+    link: "https://boxbear.co.uk/",
+    badges: [],
+    title: "Motion Graphic Designer",
+    logo: ConsultlyLogo,
+    start: "2022",
+    end: "2024",
+    description:
+      "Delivered 3D animation projects for pharmaceuticals, EV, and consumer goods companies with continuous input across all stages, from development to output. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and live streaming. Designed and optimised 3D assets for VR and AR platforms. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
+  },
     {
-      company: "Box Bear",
-      link: "https://boxbear.co.uk/",
-      badges: [],
-      title: "Motion Graphic Designer",
-      logo: ConsultlyLogo,
-      start: "2022",
-      end: "2024",
+      company: "Freelance",
+      link: "https://parabol.co",
+      badges: ["Remote"],
+      title: "2D & 3D Designer",
+      logo: ParabolLogo,
+      start: "2021",
+      end: null,
       description:
-        "Delivered 3D animation projects for pharmaceuticals, EV, and consumer goods companies with continuous input across all stages, from development to output. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and live streaming. Designed and optimised 3D assets for VR and AR platforms. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
+        "Independently source and manage freelance projects, building strong client relationships through effective communication and attention to detail. Execute company rebrands and generate relevant brand guidelines. Create 2D logo animations and 3D motion graphics for global clients. Technologies: After Effects, Blender, DaVinci Resolve",
     },
-    // Other work experience...
+    {
+      company: "DNC UK Limited",
+      link: "https://www.dnc-uk.com/",
+      badges: [],
+      title: "Product Designer",
+      logo: ClevertechLogo,
+      start: "2019",
+      end: "2019",
+      description:
+        "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes. Created illustrations and CAD models to reduce the reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
+    },
+    {
+      company: "McLaren Applied",
+      link: "https://mclarenapplied.com/",
+      badges: [],
+      title: "Design Intern",
+      logo: JojoMobileLogo,
+      start: "2018",
+      end: "2018",
+      description:
+        "Assessed how McLaren Applied technology could be integrated into partner products to drive innovation. Presented solutions during weekly meetings. Gathered insights and analytics and delivered findings with the Marketing Director and team.",
+    },
   ],
   skills: [
     "Adobe Suite",
