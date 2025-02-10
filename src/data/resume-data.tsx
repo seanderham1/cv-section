@@ -129,7 +129,7 @@ export const RESUME_DATA = {
       logo: ParabolLogo,
       link: {
         label: "github.com",
-        href: "https://parabol.co/",
+        href: "https://seanderham.com/astrazeneca",
       },
     },
     {
@@ -144,11 +144,11 @@ export const RESUME_DATA = {
       logo: EvercastLogo,
       link: {
         label: "evercast.us",
-        href: "https://www.evercast.us/",
+        href: "https://seanderham.com/ubitricity",
       },
     },
     {
-      title: "Evosite",
+      title: "Evo Agency",
       techStack: [
         "Blender",
         "Premiere Pro",
@@ -158,7 +158,7 @@ export const RESUME_DATA = {
       logo: ConsultlyLogo,
       link: {
         label: "consultly.com",
-        href: "https://consultly.com/",
+        href: "https://seanderham.com/evoagency",
       },
     },
     {
@@ -169,7 +169,7 @@ export const RESUME_DATA = {
       logo: MonitoLogo,
       link: {
         label: "monito.dev",
-        href: "https://monito.dev/",
+        href: "https://seanderham.com/dstillery",
       },
     },
     {
@@ -180,7 +180,7 @@ export const RESUME_DATA = {
       logo: JarockiMeLogo,
       link: {
         label: "github.com",
-        href: "https://jarocki.me/",
+        href: "https://seanderham.com/contrastsecurity",
       },
     },
     {
@@ -191,7 +191,7 @@ export const RESUME_DATA = {
       logo: Minimal,
       link: {
         label: "useminimal.com",
-        href: "https://useminimal.com/",
+        href: "https://seanderham.com/varietal",
       },
     },
   ],
