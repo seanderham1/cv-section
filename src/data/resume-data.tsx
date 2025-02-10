@@ -23,8 +23,8 @@ import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 export const RESUME_DATA = {
   name: "Sean Derham",
   initials: "SD",
-  location: "London, UK",
-  locationLink: "https://www.google.co.uk/maps/place/London",
+  location: "seanderham.com",
+  locationLink: "https://seanderham.com/",
   about:
     "Detail-oriented Motion Graphic Designer dedicated to creating high-quality animations and virtual experiences.",
   summary:
