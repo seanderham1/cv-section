@@ -28,7 +28,7 @@ export const RESUME_DATA = {
   about:
     "Detail-oriented Motion Graphic Designer dedicated to creating high-quality animations and virtual experiences.",
   summary:
-    "As a Motion Graphic Designer, I am driven by taking projects from concept to launch. I excel in collaborative team settings and deliver high-quality work independently. I work primarily with Adobe Suite, Blender, Cinema 4D, JS/CSS and Unreal Engine. I have four years of experience working in person and remotely with companies worldwide.",
+    "Motion Graphic Designer with four years of experience working both in studio and remotely with global clients. Specialist in healthcare communications and taking projects from concept to launch. I work primarily with Adobe Suite, Blender, Cinema 4D, JS/CSS and Unreal Engine.",
   avatarUrl: "https://raw.githubusercontent.com/seanderham1/cv-section/refs/heads/main/src/images/logos/profile-cv.webp",
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
@@ -62,23 +62,34 @@ export const RESUME_DATA = {
   ],
   work: [
   {
+    company: "Career Break",
+    link: "https://boxbear.co.uk/",
+    badges: [],
+    title: "Travelling",
+    logo: ConsultlyLogo,
+    start: "Jun 2024",
+    end: "Present",
+    description:
+      "Asia, Oceania.",
+  },
+  {
     company: "Box Bear",
     link: "https://boxbear.co.uk/",
     badges: [],
     title: "Motion Graphic Designer",
     logo: ConsultlyLogo,
-    start: "2022",
-    end: "2024",
+    start: "May 2022",
+    end: "May 2024",
     description:
       "Delivered 3D animation projects for pharmaceuticals, EV, and consumer goods companies with continuous input across all stages, from development to output. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and live streaming. Designed and optimised 3D assets for VR and AR platforms. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
   },
     {
       company: "Freelance",
-      link: "https://parabol.co",
+      link: "https://www.linkedin.com/in/seanderham/",
       badges: ["Remote"],
       title: "2D & 3D Designer",
       logo: ParabolLogo,
-      start: "2021",
+      start: "Jun 2021",
       end: null,
       description:
         "Independently source and manage freelance projects, building strong client relationships through effective communication and attention to detail. Execute company rebrands and generate relevant brand guidelines. Create 2D logo animations and 3D motion graphics for global clients. Technologies: After Effects, Blender, DaVinci Resolve",
@@ -89,8 +100,8 @@ export const RESUME_DATA = {
       badges: [],
       title: "Product Designer",
       logo: ClevertechLogo,
-      start: "2019",
-      end: "2019",
+      start: "Jun 2019",
+      end: "Aug 2019",
       description:
         "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes. Created illustrations and CAD models to reduce the reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
     },
@@ -100,8 +111,8 @@ export const RESUME_DATA = {
       badges: [],
       title: "Design Intern",
       logo: JojoMobileLogo,
-      start: "2018",
-      end: "2018",
+      start: "Jun 2018",
+      end: "Aug 2018",
       description:
         "Assessed how McLaren Applied technology could be integrated into partner products to drive innovation. Presented solutions during weekly meetings. Gathered insights and analytics and delivered findings with the Marketing Director and team.",
     },
@@ -120,7 +131,7 @@ export const RESUME_DATA = {
       title: "Astrazeneca",
       techStack: [
         "Blender",
-        "Premiere Pro",
+        "Adobe Suite",
         "iClone",
         "Character Creator",
       ],
@@ -136,7 +147,7 @@ export const RESUME_DATA = {
       title: "Ubitricity",
       techStack: [
         "Cinema 4D",
-        "Premiere Pro",
+        "Adobe Suite",
         "After Effects",
       ],
       description:
@@ -151,7 +162,7 @@ export const RESUME_DATA = {
       title: "Evo Agency",
       techStack: [
         "Blender",
-        "Premiere Pro",
+        "Adobe Suite",
         "After Effects",
       ],
       description: "Dynamic animation for Evo Agency’s brand overhaul, highlighting digital solutions",
@@ -174,7 +185,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Contrast Security",
-      techStack: ["Blender", "Premiere Pro", "After Effects"],
+      techStack: ["Blender", "Adobe Suite", "After Effects"],
       description:
         "Video featuring a senior team to highlight security innovations",
       logo: JarockiMeLogo,
