@@ -29,7 +29,7 @@ export const RESUME_DATA = {
     "Detail-oriented Motion Graphic Designer dedicated to creating high-quality animations and virtual experiences.",
   summary:
     "Motion Graphic Designer with four years of experience working both in studio and remotely with global clients. Specialist in healthcare communications and taking projects from concept to launch. I work primarily with Adobe Suite, Blender, Cinema 4D, JS/CSS and Unreal Engine.",
-  avatarUrl: "https://raw.githubusercontent.com/seanderham1/cv-section/refs/heads/main/src/images/logos/profile-cv.webp",
+  avatarUrl: "https://raw.githubusercontent.com/seanderham1/cv-section/refs/heads/main/src/images/logos/profile.jpg",
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
     email: "seanderham@hotmail.com",
