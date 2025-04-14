@@ -14,6 +14,7 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
+        print: { raw: 'print' }, // 👈 Add this line
       },
     },
     extend: {
@@ -71,6 +72,13 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+    },
+  },
+  variants: {
+    extend: {
+      display: ['print'], // 👈 Enable print variants
+      padding: ['print'],
+      margin: ['print'],
     },
   },
   plugins: [require("tailwindcss-animate")],
