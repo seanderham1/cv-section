@@ -68,7 +68,7 @@ export const RESUME_DATA = {
     title: "Travelling",
     logo: ConsultlyLogo,
     start: "Jun 2024",
-    end: "Present",
+    end: "Mar 2025",
     description:
       "Asia, Oceania.",
   },
