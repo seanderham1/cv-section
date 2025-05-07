@@ -62,6 +62,17 @@ export const RESUME_DATA = {
   ],
   work: [
   {
+    company: "Freelance",
+    link: "https://www.linkedin.com/in/seanderham/",
+    badges: ["Remote"],
+    title: "Motion Designer",
+    logo: ConsultlyLogo,
+    start: "Apr 2025",
+    end: null,
+    description:
+      "Working directly with clients on brand animations for social channels and internal events. Technologies: Premiere Pro, After Effects, Cinema 4D, Blender",
+  },
+  {
     company: "Career Break",
     link: "https://boxbear.co.uk/",
     badges: [],
@@ -90,7 +101,7 @@ export const RESUME_DATA = {
       title: "2D & 3D Designer",
       logo: ParabolLogo,
       start: "Jun 2021",
-      end: null,
+      end: "Apr 2022",
       description:
         "Independently source and manage freelance projects, building strong client relationships through effective communication and attention to detail. Execute company rebrands and generate relevant brand guidelines. Create 2D logo animations and 3D motion graphics for global clients. Technologies: After Effects, Blender, DaVinci Resolve",
     },
