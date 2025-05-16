@@ -116,17 +116,6 @@ export const RESUME_DATA = {
       description:
         "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes. Created illustrations and CAD models to reduce the reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
     },
-    {
-      company: "McLaren Applied",
-      link: "https://mclarenapplied.com/",
-      badges: [],
-      title: "Design Intern",
-      logo: JojoMobileLogo,
-      start: "Jun 2018",
-      end: "Aug 2018",
-      description:
-        "Assessed how McLaren Applied technology could be integrated into partner products to drive innovation. Presented solutions during weekly meetings. Gathered insights and analytics and delivered findings with the Marketing Director and team.",
-    },
   ],
   skills: [
     "Adobe Suite",
