@@ -70,13 +70,13 @@ export const RESUME_DATA = {
     start: "Apr 2025",
     end: null,
     description:
-      "Working directly with clients on brand animations for social channels and internal events. Technologies: Premiere Pro, After Effects, Cinema 4D, Blender",
+      "Creating motion graphic and typographic animations for internal meetings and events. Working directly with clients across sectors to deliver focused, high-quality motion design. Technologies: Premiere Pro, After Effects, Cinema 4D",
   },
   {
-    company: "Career Break",
+    company: "Travelling",
     link: "https://boxbear.co.uk/",
     badges: [],
-    title: "Travelling",
+    title: "Career Break",
     logo: ConsultlyLogo,
     start: "Jun 2024",
     end: "Mar 2025",
