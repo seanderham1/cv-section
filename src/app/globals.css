@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -47,7 +46,6 @@
     --ring: 216 12.2% 83.9%;
   }
 }
-
 @layer base {
   * {
     @apply border-border;
@@ -57,7 +55,6 @@
     overflow-y: hidden; /* Prevent vertical scrolling */
   }
 }
-
 /* Print-specific styles */
 @media print {
   /* General print styles */
@@ -70,38 +67,70 @@
     overflow-y: visible !important; /* Enable scrolling for print */
   }
   
-  /* First page stays as is */
-  .cv-container {
+  /* First page styles */
+  .cv-container, #cv-container, main, .main-content {
     margin: 0;
     padding: 0;
   }
   
-  /* Styling for content that should appear on the second page */
-  .print-second-page {
+  /* General rules for all sections */
+  section, article, div > h2, div[class*="section"] {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  /* Education section must stay on first page */
+  #education, 
+  .education,
+  div[class*="education"],
+  h2 + div:nth-of-type(5) /* Targeting by position if no ID/class available */
+  {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+  
+  /* Move Skills to second page with margin */
+  #skills, 
+  .skills,
+  div[class*="skills"],
+  h2 + div:nth-of-type(6) /* Targeting by position if no ID/class available */
+  {
     page-break-before: always;
-    padding-top: 2cm; /* Add top margin for second page */
+    padding-top: 2cm !important; /* Top margin only for second page */
+    margin-top: 0 !important;
   }
   
-  /* Force content to fit on fewer pages */
-  .cv-content {
+  /* Projects should stay together on second page */
+  #projects, 
+  .projects,
+  div[class*="project"],
+  h2 + div:nth-of-type(7) /* Targeting by position if no ID/class available */
+  {
     page-break-inside: avoid;
     break-inside: avoid;
   }
   
-  /* Control where page breaks should NOT occur */
-  .no-break {
-    page-break-inside: avoid;
-    break-inside: avoid;
+  /* Make work experience items more compact */
+  div[class*="experience"] > div,
+  #experience > div {
+    margin-bottom: 0.4cm;
   }
   
-  /* Compact layout for second page */
-  .compact-section {
-    margin-top: 0.5cm;
-    margin-bottom: 0.5cm;
+  /* Compact all sections for better fit */
+  section, article, [class*="section"] {
+    margin-top: 0.3cm;
+    margin-bottom: 0.3cm;
   }
-}
-
-/* Legacy class - kept for compatibility */
-.print-force-new-page {
-  page-break-before: always;
+  
+  /* Reduce spacing between projects */
+  div[class*="project"] > div,
+  #projects > div {
+    margin-bottom: 0.3cm;
+  }
+  
+  /* Special handling for headers and main content */
+  header, footer {
+    margin: 0;
+    padding: 0;
+  }
 }
