@@ -62,13 +62,24 @@ export const RESUME_DATA = {
   ],
   work: [
   {
+    company: "Truth Creative",
+    link: "https://www.truth-creative.co.uk/",
+    badges: ["Contract"],
+    title: "Motion Designer",
+    logo: ConsultlyLogo,
+    start: "Jun 2025",
+    end: null,
+    description:
+      "Crafting high-end product visualisations using Cinema 4D and Redshift, designing motion graphics for cross-platform social content, and building custom MOGRTs and templates. Responsible for on-site event filming and editing, delivering cohesive visual output from shoot to screen. Technologies: Cinema 4D, Redshift, After Effects, Premiere Pro",
+  },
+  {
     company: "Freelance",
     link: "https://www.linkedin.com/in/seanderham/",
     badges: ["Remote"],
     title: "Motion Designer",
     logo: ConsultlyLogo,
-    start: "Apr 2025",
-    end: null,
+    start: "Mar 2025",
+    end: "May 2025",
     description:
       "Creating motion graphic and typographic animations for internal meetings and events. Working directly with clients across sectors to deliver focused, high-quality motion design. Technologies: Premiere Pro, After Effects, Cinema 4D",
   },
@@ -104,17 +115,6 @@ export const RESUME_DATA = {
       end: "Apr 2022",
       description:
         "Independently source and manage freelance projects, building strong client relationships through effective communication and attention to detail. Execute company rebrands and generate relevant brand guidelines. Create 2D logo animations and 3D motion graphics for global clients. Technologies: After Effects, Blender, DaVinci Resolve",
-    },
-    {
-      company: "DNC UK Limited",
-      link: "https://www.dnc-uk.com/",
-      badges: [],
-      title: "Product Designer",
-      logo: ClevertechLogo,
-      start: "Jun 2019",
-      end: "Aug 2019",
-      description:
-        "Worked with designers to develop sustainable water bottle concepts for Polar Gear. Focused on materials, design, and manufacturing processes. Created illustrations and CAD models to reduce the reliance on physical prototypes. Technologies: SolidWorks, Illustrator",
     },
   ],
   skills: [
