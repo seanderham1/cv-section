@@ -70,7 +70,7 @@ export const RESUME_DATA = {
     start: "Jun 2025",
     end: null,
     description:
-      "Crafting high-end product visualisations using Cinema 4D and Redshift, designing motion graphics for cross-platform social content, and building custom MOGRTs and templates. Responsible for on-site event filming and editing, delivering cohesive visual output from shoot to screen. Technologies: Cinema 4D, Redshift, After Effects, Premiere Pro",
+      "Creating motion-led content for social platforms (TikTok and Instagram), including editing short-form video ads and animations. Responsible for filming on-site, managing raw multicam footage. Crafting high-end product visualisations using Cinema 4D and Redshift. Technologies: After Effects, Premiere Pro, Cinema 4D, Redshift",
   },
   {
     company: "Freelance",
