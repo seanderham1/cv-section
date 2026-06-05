@@ -62,17 +62,6 @@ export const RESUME_DATA = {
   ],
   work: [
   {
-    company: "Truth Creative",
-    link: "https://www.truth-creative.co.uk/",
-    badges: ["Contract"],
-    title: "Motion Designer",
-    logo: ConsultlyLogo,
-    start: "Jun 2025",
-    end: "Feb 2026",
-    description:
-      "Creating motion-led content for social platforms (TikTok and Instagram), including editing short-form video ads and animations. Responsible for filming on-site, managing raw multicam footage. Crafting high-end product visualisations using Cinema 4D and Redshift. Technologies: After Effects, Premiere Pro, Cinema 4D, Redshift",
-  },
-  {
     company: "The Adare Collection",
     link: "https://theadarecollection.com/",
     badges: ["Remote"],
@@ -83,16 +72,26 @@ export const RESUME_DATA = {
         start: "Aug 2025",
         end: null,
         description:
-          "Promoted to lead the platform’s technical direction — owning architecture decisions, SEO infrastructure with structured data and pre-rendered pages, interactive property maps, virtual tours, and the multi-step enquiry workflow. Lead ongoing development, deployment, and feature expansion on Firebase Hosting. Technologies: React, TypeScript, Vite, Express, Tailwind CSS, Firebase",
+          "Lead developer for a luxury accommodation platform marketing private estates and executive rentals for Ryder Cup 2027 near Adare Manor. Built the site architecture end-to-end — property catalogue, interactive maps, virtual tours, and a multi-step enquiry system — plus SEO infrastructure with structured data and pre-rendered pages. Own ongoing development, deployment, and feature expansion on Firebase Hosting. Technologies: React, TypeScript, Vite, Express, Tailwind CSS, Firebase",
       },
       {
         title: "Web Developer",
         start: "Mar 2025",
         end: "Jul 2025",
-        description:
-          "Built the initial luxury accommodation platform for private estates and executive rentals ahead of Ryder Cup 2027 near Adare Manor — establishing the site framework, property catalogue, core page templates, and enquiry foundations. Technologies: React, TypeScript, Vite, Express, Tailwind CSS, Firebase",
+        description: "",
       },
     ],
+  },
+  {
+    company: "Truth Creative",
+    link: "https://www.truth-creative.co.uk/",
+    badges: ["Contract"],
+    title: "Motion Designer",
+    logo: ConsultlyLogo,
+    start: "Jun 2025",
+    end: "Feb 2026",
+    description:
+      "Creating motion-led content for social platforms (TikTok and Instagram), including editing short-form video ads and animations. Responsible for filming on-site, managing raw multicam footage. Crafting high-end product visualisations using Cinema 4D and Redshift. Technologies: After Effects, Premiere Pro, Cinema 4D, Redshift",
   },
   {
     company: "Freelance",

@@ -163,9 +163,11 @@ export default function Page() {
                           {role.start} - {role.end ?? "Present"}
                         </div>
                       </div>
-                      <p className="mt-2 text-xs text-muted-foreground print:text-[10px]">
-                        {role.description}
-                      </p>
+                      {role.description ? (
+                        <p className="mt-2 text-xs text-muted-foreground print:text-[10px]">
+                          {role.description}
+                        </p>
+                      ) : null}
                     </div>
                   ))}
                 </CardHeader>
