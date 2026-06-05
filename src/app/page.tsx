@@ -106,9 +106,23 @@ export default function Page() {
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
+            const roles =
+              "roles" in work
+                ? [...work.roles]
+                : [
+                    {
+                      title: work.title,
+                      start: work.start,
+                      end: work.end,
+                      description: work.description,
+                    },
+                  ];
+            const companyStart = roles[roles.length - 1].start;
+            const companyEnd = roles[0].end ?? "Present";
+
             return (
               <Card key={work.company}>
-                <CardHeader>
+                <CardHeader className="space-y-3">
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                       <a
@@ -132,17 +146,29 @@ export default function Page() {
                       </span>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end ?? "Present"}
+                      {companyStart} - {companyEnd}
                     </div>
                   </div>
 
-                  <h4 className="font-mono text-sm leading-none print:text-[12px]">
-                    {work.title}
-                  </h4>
+                  {roles.map((role, index) => (
+                    <div
+                      key={`${role.title}-${role.start}`}
+                      className={index > 0 ? "border-t border-border/60 pt-3" : undefined}
+                    >
+                      <div className="flex items-center justify-between gap-x-2">
+                        <h4 className="font-mono text-sm leading-none print:text-[12px]">
+                          {role.title}
+                        </h4>
+                        <div className="text-xs tabular-nums text-gray-500 print:text-[10px]">
+                          {role.start} - {role.end ?? "Present"}
+                        </div>
+                      </div>
+                      <p className="mt-2 text-xs text-muted-foreground print:text-[10px]">
+                        {role.description}
+                      </p>
+                    </div>
+                  ))}
                 </CardHeader>
-                <CardContent className="mt-2 text-xs print:text-[10px]">
-                  {work.description}
-                </CardContent>
               </Card>
             );
           })}
