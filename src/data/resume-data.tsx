@@ -73,26 +73,26 @@ export const RESUME_DATA = {
       "Creating motion-led content for social platforms (TikTok and Instagram), including editing short-form video ads and animations. Responsible for filming on-site, managing raw multicam footage. Crafting high-end product visualisations using Cinema 4D and Redshift. Technologies: After Effects, Premiere Pro, Cinema 4D, Redshift",
   },
   {
+    company: "The Adare Collection",
+    link: "https://theadarecollection.com/",
+    badges: ["Remote"],
+    title: "Lead Web Developer",
+    logo: ConsultlyLogo,
+    start: "Aug 2025",
+    end: null,
+    description:
+      "Lead developer for a luxury accommodation platform marketing private estates and executive rentals for Ryder Cup 2027 near Adare Manor. Built the site architecture end-to-end — property catalogue, interactive maps, virtual tours, and a multi-step enquiry system — plus SEO infrastructure with structured data and pre-rendered pages. Own ongoing development, deployment, and feature expansion on Firebase Hosting. Technologies: React, TypeScript, Vite, Express, Tailwind CSS, Firebase",
+  },
+  {
     company: "Freelance",
     link: "https://www.linkedin.com/in/seanderham/",
     badges: ["Remote"],
     title: "Motion Designer",
     logo: ConsultlyLogo,
-    start: "Mar 2025",
+    start: "Jun 2024",
     end: "May 2025",
     description:
       "Creating motion graphic and typographic animations for internal meetings and events. Working directly with clients across sectors to deliver focused, high-quality motion design. Technologies: Premiere Pro, After Effects, Cinema 4D",
-  },
-  {
-    company: "Travelling",
-    link: "https://boxbear.co.uk/",
-    badges: [],
-    title: "Career Break",
-    logo: ConsultlyLogo,
-    start: "Jun 2024",
-    end: "Mar 2025",
-    description:
-      "Asia, Oceania.",
   },
   {
     company: "Box Bear",
