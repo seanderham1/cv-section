@@ -72,13 +72,14 @@ export const RESUME_DATA = {
         start: "Aug 2025",
         end: null,
         description:
-          "Lead developer for a luxury accommodation platform marketing private estates and executive rentals for Ryder Cup 2027 near Adare Manor. Built the site architecture end-to-end — property catalogue, interactive maps, virtual tours, and a multi-step enquiry system — plus SEO infrastructure with structured data and pre-rendered pages. Own ongoing development, deployment, and feature expansion on Firebase Hosting. Technologies: React, TypeScript, Vite, Express, Tailwind CSS, Firebase",
+          "Lead technical ownership of theadarecollection.com — interactive property maps, virtual tours, SEO with structured data, and ongoing deployment on Firebase Hosting. Technologies: React, TypeScript, Vite, Express, Tailwind CSS, Firebase",
       },
       {
         title: "Web Developer",
         start: "Mar 2025",
         end: "Jul 2025",
-        description: "",
+        description:
+          "Built the luxury accommodation platform for Ryder Cup 2027 from the ground up — site framework, property catalogue, page templates, and enquiry foundations. Technologies: React, TypeScript, Vite, Tailwind CSS, Firebase",
       },
     ],
   },

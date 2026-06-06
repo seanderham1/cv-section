@@ -106,19 +106,17 @@ export default function Page() {
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
-            const roles =
-              "roles" in work
-                ? [...work.roles]
-                : [
-                    {
-                      title: work.title,
-                      start: work.start,
-                      end: work.end,
-                      description: work.description,
-                    },
-                  ];
-            const companyStart = roles[roles.length - 1].start;
-            const companyEnd = roles[0].end ?? "Present";
+            const hasMultipleRoles = "roles" in work;
+            const roles = hasMultipleRoles
+              ? [...work.roles]
+              : [
+                  {
+                    title: work.title,
+                    start: work.start,
+                    end: work.end,
+                    description: work.description,
+                  },
+                ];
 
             return (
               <Card key={work.company}>
@@ -145,9 +143,11 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {companyStart} - {companyEnd}
-                    </div>
+                    {!hasMultipleRoles ? (
+                      <div className="text-sm tabular-nums text-gray-500">
+                        {roles[0].start} - {roles[0].end ?? "Present"}
+                      </div>
+                    ) : null}
                   </div>
 
                   {roles.map((role, index) => (
@@ -159,14 +159,16 @@ export default function Page() {
                         <h4 className="font-mono text-sm leading-none print:text-[12px]">
                           {role.title}
                         </h4>
-                        <div className="text-xs tabular-nums text-gray-500 print:text-[10px]">
-                          {role.start} - {role.end ?? "Present"}
-                        </div>
+                        {hasMultipleRoles ? (
+                          <div className="text-sm tabular-nums text-gray-500">
+                            {role.start} - {role.end ?? "Present"}
+                          </div>
+                        ) : null}
                       </div>
                       {role.description ? (
-                        <p className="mt-2 text-xs text-muted-foreground print:text-[10px]">
+                        <CardContent className="mt-2 p-0 print:text-[12px]">
                           {role.description}
-                        </p>
+                        </CardContent>
                       ) : null}
                     </div>
                   ))}
