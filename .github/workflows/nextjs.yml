@@ -68,11 +68,22 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
+        env:
+          NODE_ENV: production
+          GITHUB_ACTIONS: true
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Verify static export
         run: |
           if [ ! -f out/index.html ]; then
             echo "Static export failed: out/index.html not found"
+            exit 1
+          fi
+          if ! grep -q "Sean Derham" out/index.html; then
+            echo "Build output is missing CV content"
+            exit 1
+          fi
+          if grep -qi "Minimalist CV" out/index.html || grep -qi "BartoszJarocki" out/index.html; then
+            echo "Build output contains template README content"
             exit 1
           fi
       - name: Upload artifact
