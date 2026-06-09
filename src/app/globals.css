@@ -61,8 +61,12 @@
 
 @media print {
   @page {
-    margin: 0.7cm;
+    margin: 0.45cm;
     size: A4 portrait;
+  }
+
+  html {
+    font-size: 10px;
   }
 
   body {
@@ -76,21 +80,25 @@
     padding: 0 !important;
   }
 
-  #cv-skills {
+  #cv-page-2 {
     break-before: page;
     page-break-before: always;
-    padding-top: 0.25rem;
   }
 
-  #cv-projects {
+  #cv-projects .cv-print-card {
     break-inside: avoid;
     page-break-inside: avoid;
   }
 
   .cv-print-card {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .cv-print-description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 
   .animate-fade-in {
