@@ -90,11 +90,11 @@
     page-break-inside: avoid;
   }
 
-  .cv-print-card {
-    margin-bottom: 0.15rem;
+  #cv-work .cv-print-card {
+    margin-bottom: 0;
   }
 
-  .cv-print-description {
+  #cv-projects .cv-project-description {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;

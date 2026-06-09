@@ -105,7 +105,7 @@ export default function Page() {
             {RESUME_DATA.summary}
           </p>
         </Section>
-        <Section id="cv-work" className="print:gap-y-1">
+        <Section id="cv-work">
           <h2 className="text-xl font-bold print:text-base">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             const hasMultipleRoles = "roles" in work;
@@ -122,7 +122,7 @@ export default function Page() {
 
             return (
               <Card key={work.company} className="cv-print-card print:shadow-none">
-                <CardHeader className="space-y-3 print:space-y-1 print:px-3 print:py-2">
+                <CardHeader className="space-y-3">
                   <div className="flex items-center justify-between gap-x-2 text-base print:text-sm">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
                       <a
@@ -155,7 +155,7 @@ export default function Page() {
                   {roles.map((role, index) => (
                     <div
                       key={`${role.title}-${role.start}`}
-                      className={index > 0 ? "border-t border-border/60 pt-3 print:border-0 print:pt-1" : undefined}
+                      className={index > 0 ? "border-t border-border/60 pt-3 print:border-t print:pt-3" : undefined}
                     >
                       <div className="flex items-center justify-between gap-x-2">
                         <h4 className="font-mono text-sm leading-none print:text-[10px]">
@@ -168,19 +168,19 @@ export default function Page() {
                         ) : null}
                       </div>
                       {role.description && !hasMultipleRoles ? (
-                        <CardContent className="cv-print-description mt-2 p-0 print:mt-0.5 print:text-[9px] print:leading-tight">
+                        <CardContent className="mt-2 p-0 print:mt-2 print:text-[9px] print:leading-tight">
                           {role.description}
                         </CardContent>
                       ) : null}
                       {role.description && hasMultipleRoles ? (
-                        <CardContent className="cv-print-description mt-2 p-0 print:mt-0.5 print:text-[9px] print:leading-tight print:hidden">
+                        <CardContent className="mt-2 p-0 print:mt-2 print:text-[9px] print:leading-tight print:hidden">
                           {role.description}
                         </CardContent>
                       ) : null}
                     </div>
                   ))}
                   {hasMultipleRoles && roles[0]?.description ? (
-                    <CardContent className="cv-print-description hidden p-0 print:mt-0.5 print:block print:text-[9px] print:leading-tight">
+                    <CardContent className="hidden p-0 print:mt-2 print:block print:text-[9px] print:leading-tight">
                       {roles[0].description}
                     </CardContent>
                   ) : null}
