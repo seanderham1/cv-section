@@ -17,7 +17,7 @@ import {
   TastyCloudLogo,
   YearProgressLogo,
 } from "@/images/logos";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 // The resume data object
 export const RESUME_DATA = {
@@ -32,7 +32,7 @@ export const RESUME_DATA = {
   avatarUrl: "https://raw.githubusercontent.com/seanderham1/cv-section/refs/heads/main/src/images/logos/profile.jpg",
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
-    email: "seanderham@hotmail.com",
+    email: "sjderham@protonmail.com",
     tel: "+447775692249",
     social: [
       {
@@ -44,11 +44,6 @@ export const RESUME_DATA = {
         name: "LinkedIn",
         url: "https://uk.linkedin.com/in/seanderham",
         icon: LinkedInIcon,
-      },
-      {
-        name: "X",
-        url: "https://twitter.com/seanderham",
-        icon: XIcon,
       },
     ],
   },
