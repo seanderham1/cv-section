@@ -68,14 +68,14 @@ export const RESUME_DATA = {
     logo: ConsultlyLogo,
     roles: [
       {
-        title: "Lead Web Developer",
+        title: "Lead Web Designer",
         start: "Aug 2025",
         end: null,
         description:
           "Lead technical ownership of theadarecollection.com — interactive property maps, virtual tours, SEO with structured data, and ongoing deployment on Firebase Hosting. Technologies: React, TypeScript, Vite, Express, Tailwind CSS, Firebase",
       },
       {
-        title: "Web Developer",
+        title: "Web Designer",
         start: "Mar 2025",
         end: "Jul 2025",
         description:
