@@ -38,7 +38,7 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
     email: "sjderham@protonmail.com",
-    tel: "+447775692249",
+    tel: "+447597368482",
     social: [
       {
         name: "GitHub",

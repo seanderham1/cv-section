@@ -19,10 +19,10 @@ export default function Page() {
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16">
       <IframeResizer />
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:max-w-none print:space-y-3">
-        <div className="flex items-center justify-between print:items-start">
-          <div className="flex-1 space-y-1.5 print:space-y-1">
+        <div className="flex items-center justify-between print:items-start print:gap-5">
+          <div className="min-w-0 flex-1 space-y-1.5 print:space-y-1">
             <h1 className="text-2xl font-bold print:text-2xl print:leading-tight">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground print:max-w-none print:text-sm print:leading-snug">
+            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground print:max-w-[calc(100%-0.5rem)] print:pr-4 print:text-sm print:leading-snug">
               {RESUME_DATA.about}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
