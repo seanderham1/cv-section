@@ -19,6 +19,11 @@ import {
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
+const cvBasePath =
+  process.env.GITHUB_ACTIONS === "true" || process.env.NODE_ENV === "production"
+    ? "/cv-section"
+    : "";
+
 // The resume data object
 export const RESUME_DATA = {
   name: "Sean Derham",
@@ -29,7 +34,7 @@ export const RESUME_DATA = {
     "Detail-oriented Motion Graphic Designer dedicated to creating high-quality animations and virtual experiences.",
   summary:
     "Motion Graphic Designer with four years of experience working both in studio and remotely with global clients. Specialist in healthcare communications and taking projects from concept to launch. I work primarily with Adobe Suite, Blender, Cinema 4D, JS/CSS and Unreal Engine.",
-  avatarUrl: "https://raw.githubusercontent.com/seanderham1/cv-section/refs/heads/main/src/images/logos/profile.jpg",
+  avatarUrl: `${cvBasePath}/profile.jpg`,
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
     email: "sjderham@protonmail.com",

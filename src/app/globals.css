@@ -71,6 +71,11 @@
     -webkit-print-color-adjust: exact;
   }
 
+  img {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
   .container {
     max-width: none !important;
     padding-left: 0 !important;

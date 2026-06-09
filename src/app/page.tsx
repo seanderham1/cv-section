@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
@@ -94,10 +93,14 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="size-28 print:hidden">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={RESUME_DATA.avatarUrl}
+            alt={RESUME_DATA.name}
+            width={112}
+            height={112}
+            className="size-28 shrink-0 rounded-xl object-cover print:size-24"
+          />
         </div>
         <Section className="print:gap-y-1.5">
           <h2 className="text-xl font-bold print:text-lg">About</h2>
