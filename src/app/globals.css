@@ -61,12 +61,8 @@
 
 @media print {
   @page {
-    margin: 0.45cm;
+    margin: 1.25cm 0.55cm 0.6cm;
     size: A4 portrait;
-  }
-
-  html {
-    font-size: 10px;
   }
 
   body {
@@ -75,14 +71,31 @@
     -webkit-print-color-adjust: exact;
   }
 
+  .container {
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   main {
     margin: 0 !important;
     padding: 0 !important;
   }
 
+  main > section {
+    max-width: none !important;
+    width: 100% !important;
+  }
+
   #cv-page-2 {
     break-before: page;
     page-break-before: always;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  #cv-work .cv-print-card:last-child {
+    margin-bottom: 0 !important;
   }
 
   #cv-projects .cv-print-card {
