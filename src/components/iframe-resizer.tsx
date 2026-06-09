@@ -14,7 +14,11 @@ const getContentHeight = () => {
   const paddingTop = Number.parseFloat(mainStyles.paddingTop) || 0;
   const paddingBottom = Number.parseFloat(mainStyles.paddingBottom) || 0;
 
-  return Math.ceil(section.offsetTop + section.offsetHeight + paddingTop + paddingBottom);
+  const content = section as HTMLElement;
+
+  return Math.ceil(
+    content.offsetTop + content.offsetHeight + paddingTop + paddingBottom,
+  );
 };
 
 const postIframeHeight = () => {
