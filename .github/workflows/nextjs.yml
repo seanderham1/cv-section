@@ -75,6 +75,12 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Verify static export
+        run: |
+          if [ ! -f out/index.html ]; then
+            echo "Static export failed: out/index.html not found"
+            exit 1
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
