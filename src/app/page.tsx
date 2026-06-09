@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16">
       <IframeResizer />
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -94,19 +94,19 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="size-28">
+          <Avatar className="size-28 print:size-20">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
         </div>
-        <Section>
-          <h2 className="text-xl font-bold">About</h2>
+        <Section className="print:gap-y-2">
+          <h2 className="text-xl font-bold print:text-lg">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
             {RESUME_DATA.summary}
           </p>
         </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+        <Section className="print:gap-y-2">
+          <h2 className="text-xl font-bold print:text-lg">Work Experience</h2>
           {RESUME_DATA.work.map((work) => {
             const hasMultipleRoles = "roles" in work;
             const roles = hasMultipleRoles
@@ -121,8 +121,8 @@ export default function Page() {
                 ];
 
             return (
-              <Card key={work.company}>
-                <CardHeader className="space-y-3">
+              <Card key={work.company} className="cv-print-card">
+                <CardHeader className="space-y-3 print:space-y-1.5 print:py-3">
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                       <a
@@ -155,7 +155,7 @@ export default function Page() {
                   {roles.map((role, index) => (
                     <div
                       key={`${role.title}-${role.start}`}
-                      className={index > 0 ? "border-t border-border/60 pt-3" : undefined}
+                      className={index > 0 ? "border-t border-border/60 pt-3 print:pt-2" : undefined}
                     >
                       <div className="flex items-center justify-between gap-x-2">
                         <h4 className="font-mono text-sm leading-none print:text-[12px]">
@@ -168,7 +168,7 @@ export default function Page() {
                         ) : null}
                       </div>
                       {role.description ? (
-                        <CardContent className="mt-2 p-0 print:text-[12px]">
+                        <CardContent className="mt-2 p-0 print:mt-1 print:text-[10px] print:leading-snug">
                           {role.description}
                         </CardContent>
                       ) : null}
@@ -179,12 +179,12 @@ export default function Page() {
             );
           })}
         </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Education</h2>
+        <Section className="print:gap-y-2">
+          <h2 className="text-xl font-bold print:text-lg">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
-              <Card key={education.school}>
-                <CardHeader>
+              <Card key={education.school} className="cv-print-card">
+                <CardHeader className="print:py-3">
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">
                       {education.school}
@@ -194,15 +194,15 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2 print:text-[12px]">
+                <CardContent className="mt-2 p-0 print:mt-1 print:text-[10px]">
                   {education.degree}
                 </CardContent>
               </Card>
             );
           })}
         </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
+        <Section id="cv-skills" className="print:gap-y-2">
+          <h2 className="text-xl font-bold print:text-lg">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
               return (
@@ -214,9 +214,9 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+        <Section id="cv-projects" className="print:gap-y-2">
+          <h2 className="text-xl font-bold print:text-lg">Projects</h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-1.5 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard

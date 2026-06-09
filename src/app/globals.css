@@ -55,82 +55,47 @@
     overflow-y: hidden; /* Prevent vertical scrolling */
   }
 }
-/* Print-specific styles */
+.print-force-new-page {
+  page-break-before: always;
+}
+
 @media print {
-  /* General print styles */
   @page {
-    margin: 0;
+    margin: 0.7cm;
     size: A4 portrait;
   }
-  
-  body { 
-    overflow-y: visible !important; /* Enable scrolling for print */
+
+  body {
+    overflow-y: visible !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
-  
-  /* First page styles */
-  .cv-container, #cv-container, main, .main-content {
-    margin: 0;
-    padding: 0;
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
   }
-  
-  /* General rules for all sections */
-  section, article, div > h2, div[class*="section"] {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-  
-  /* Education section must stay on first page */
-  #education, 
-  .education,
-  div[class*="education"],
-  h2 + div:nth-of-type(5) /* Targeting by position if no ID/class available */
-  {
-    page-break-after: avoid;
-    break-after: avoid;
-  }
-  
-  /* Move Skills to second page with margin */
-  #skills, 
-  .skills,
-  div[class*="skills"],
-  h2 + div:nth-of-type(6) /* Targeting by position if no ID/class available */
-  {
+
+  #cv-skills {
+    break-before: page;
     page-break-before: always;
-    padding-top: 2cm !important; /* Top margin only for second page */
-    margin-top: 0 !important;
+    padding-top: 0.25rem;
   }
-  
-  /* Projects should stay together on second page */
-  #projects, 
-  .projects,
-  div[class*="project"],
-  h2 + div:nth-of-type(7) /* Targeting by position if no ID/class available */
-  {
-    page-break-inside: avoid;
+
+  #cv-projects {
     break-inside: avoid;
+    page-break-inside: avoid;
   }
-  
-  /* Make work experience items more compact */
-  div[class*="experience"] > div,
-  #experience > div {
-    margin-bottom: 0.4cm;
+
+  .cv-print-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 0.35rem;
   }
-  
-  /* Compact all sections for better fit */
-  section, article, [class*="section"] {
-    margin-top: 0.3cm;
-    margin-bottom: 0.3cm;
-  }
-  
-  /* Reduce spacing between projects */
-  div[class*="project"] > div,
-  #projects > div {
-    margin-bottom: 0.3cm;
-  }
-  
-  /* Special handling for headers and main content */
-  header, footer {
-    margin: 0;
-    padding: 0;
+
+  .animate-fade-in {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
