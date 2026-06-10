@@ -92,7 +92,7 @@ export const RESUME_DATA = {
     start: "Jun 2025",
     end: "Feb 2026",
     description:
-      "Creating motion-led content for social platforms (TikTok and Instagram), including editing short-form video ads and animations. Responsible for filming on-site, managing raw multicam footage. Crafting high-end product visualisations using Cinema 4D and Redshift. Technologies: After Effects, Premiere Pro, Cinema 4D, Redshift",
+      "On-location filming and interviews for branded content — travel to client sites, lighting setups, chroma keying and multicam capture nationwide. Colour grading, multicam editing, and motion-led short form content, including Cinema 4D and Redshift product visualisations. Technologies: Premiere Pro, After Effects, DaVinci Resolve, Cinema 4D, Redshift",
   },
   {
     company: "Freelance",
