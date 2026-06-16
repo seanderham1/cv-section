@@ -126,8 +126,8 @@ export default function Page() {
             return (
               <Card key={work.company} className="cv-print-card print:shadow-none">
                 <CardHeader className="space-y-3 print:space-y-2">
-                  <div className="flex items-center justify-between gap-x-2 text-base print:text-sm">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                       <a
                         className="hover:underline"
                         href={work.link}
@@ -149,7 +149,7 @@ export default function Page() {
                       </span>
                     </h3>
                     {!hasMultipleRoles ? (
-                      <div className="text-sm tabular-nums text-gray-500 print:text-xs">
+                      <div className="text-sm tabular-nums text-gray-500">
                         {roles[0].start} - {roles[0].end ?? "Present"}
                       </div>
                     ) : null}
@@ -161,32 +161,22 @@ export default function Page() {
                       className={index > 0 ? "border-t border-border/60 pt-3 print:border-t print:pt-2" : undefined}
                     >
                       <div className="flex items-center justify-between gap-x-2">
-                        <h4 className="font-mono text-sm leading-none print:text-sm">
+                        <h4 className="font-mono text-sm leading-none">
                           {role.title}
                         </h4>
                         {hasMultipleRoles ? (
-                          <div className="text-sm tabular-nums text-gray-500 print:text-xs">
+                          <div className="text-sm tabular-nums text-gray-500">
                             {role.start} - {role.end ?? "Present"}
                           </div>
                         ) : null}
                       </div>
-                      {role.description && !hasMultipleRoles ? (
+                      {role.description ? (
                         <CardContent className="mt-2 p-0 print:mt-1.5 print:text-sm print:leading-snug">
-                          {role.description}
-                        </CardContent>
-                      ) : null}
-                      {role.description && hasMultipleRoles ? (
-                        <CardContent className="mt-2 p-0 print:mt-1.5 print:text-sm print:leading-snug print:hidden">
                           {role.description}
                         </CardContent>
                       ) : null}
                     </div>
                   ))}
-                  {hasMultipleRoles && roles[0]?.description ? (
-                    <CardContent className="hidden p-0 print:mt-1.5 print:block print:text-sm print:leading-snug">
-                      {roles[0].description}
-                    </CardContent>
-                  ) : null}
                 </CardHeader>
               </Card>
             );
@@ -199,11 +189,11 @@ export default function Page() {
               return (
                 <Card key={education.school} className="cv-print-card print:shadow-none">
                   <CardHeader className="print:p-0">
-                    <div className="flex items-center justify-between gap-x-2 text-base print:text-sm">
-                      <h3 className="font-semibold leading-none print:text-sm">
+                    <div className="flex items-center justify-between gap-x-2 text-base">
+                      <h3 className="font-semibold leading-none">
                         {education.school}
                       </h3>
-                      <div className="text-sm tabular-nums text-gray-500 print:text-xs">
+                      <div className="text-sm tabular-nums text-gray-500">
                         {education.start} - {education.end}
                       </div>
                     </div>
