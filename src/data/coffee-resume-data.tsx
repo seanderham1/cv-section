@@ -95,7 +95,7 @@ export const COFFEE_RESUME_DATA: ResumeData = {
         "Delivered 3D animation projects for pharmaceuticals, EV, and consumer goods companies with continuous input across all stages, from development to output. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and live streaming. Designed and optimised 3D assets for VR and AR platforms. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
     },
     {
-      company: "The Championships, Wimbledon",
+      company: "Wimbledon, Championships",
       link: "https://www.wimbledon.com/",
       badges: ["Team Lead"],
       title: "Catering & Hospitality Team Lead",
