@@ -13,9 +13,9 @@ export const COFFEE_RESUME_DATA: ResumeData = {
   location: "seanderham.com",
   locationLink: "https://seanderham.com/",
   about:
-    "Organised, people-focused team leader with three years of high-volume catering and hospitality experience.",
+    "Collaborative motion designer and team leader, experienced in studio work and high-volume hospitality.",
   summary:
-    "Team leader with three years running food and beverage service at The Championships, Wimbledon, where I managed a team serving players, high-profile guests and staff across the site. Since then I have worked as a designer, and I am now looking to get back into a hands-on, customer-facing role. Calm under pressure, quick to learn, and reliable through long shifts and busy service.",
+    "Motion graphic designer with four years taking projects from concept to delivery for global clients across healthcare, consumer, and branded content. Before that, I spent three years as a team lead at Wimbledon, Championships, running food and beverage service for players and high-profile guests. Organised, reliable, and comfortable working collaboratively — whether on a creative brief or a busy shift. Now looking to get back into a hands-on, customer-facing role.",
   avatarUrl: `${cvBasePath}/profile.jpg`,
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
@@ -92,7 +92,7 @@ export const COFFEE_RESUME_DATA: ResumeData = {
       start: "May 2022",
       end: "May 2024",
       description:
-        "Delivered 3D animation projects for pharmaceuticals, EV, and consumer goods companies with continuous input across all stages, from development to output. Handled pre-production planning, on-site event filming, and post-production editing for multi-camera video projects and live streaming. Designed and optimised 3D assets for VR and AR platforms. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
+        "3D animation and video projects for pharmaceutical, EV, and consumer brands — from concept through to delivery. Technologies: Premiere Pro, After Effects, Photoshop, Cinema 4D, Blender",
     },
     {
       company: "Wimbledon, Championships",
@@ -106,13 +106,13 @@ export const COFFEE_RESUME_DATA: ResumeData = {
     },
   ],
   skills: [
+    "Collaborative",
+    "Reliable",
     "Team Leadership",
     "Customer Service",
-    "Staff Training",
-    "Rota & Shift Planning",
-    "Stock Management",
     "Communication",
     "Working Under Pressure",
+    "Attention to Detail",
   ],
   projects: [],
 };
