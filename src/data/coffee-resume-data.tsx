@@ -15,7 +15,7 @@ export const COFFEE_RESUME_DATA: ResumeData = {
   about:
     "Collaborative motion designer and team leader, experienced in studio work and high-volume hospitality.",
   summary:
-    "Motion graphic designer with four years taking projects from concept to delivery for global clients across healthcare, consumer, and branded content. Before that, I spent three years as a team lead at Wimbledon, Championships, running food and beverage service for players and high-profile guests. Organised, reliable, and comfortable working collaboratively — whether on a creative brief or a busy shift. Now looking to get back into a hands-on, customer-facing role.",
+    "Motion graphic designer with four years delivering projects for global clients. Previously team lead at Wimbledon, Championships, running food and beverage service for players and high-profile guests. Reliable, organised, and calm under pressure — now looking for a hands-on, customer-facing role.",
   avatarUrl: `${cvBasePath}/profile.jpg`,
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
