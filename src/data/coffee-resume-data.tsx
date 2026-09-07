@@ -15,7 +15,7 @@ export const COFFEE_RESUME_DATA: ResumeData = {
   about:
     "Collaborative motion designer and team leader, experienced in studio work and high-volume hospitality.",
   summary:
-    "Motion graphic designer with four years delivering projects for global clients. Previously team lead at Wimbledon, Championships, running food and beverage service for players and high-profile guests. Reliable, organised, and calm under pressure — now looking for a hands-on, customer-facing role.",
+    "Motion graphic designer with four years delivering projects for global clients. Previously team lead at Wimbledon, Championships, running the media bar and restaurant. Reliable, organised, and calm under pressure — now looking for a hands-on, customer-facing role.",
   avatarUrl: `${cvBasePath}/profile.jpg`,
   personalWebsiteUrl: "https://seanderham.com",
   contact: {
@@ -98,11 +98,11 @@ export const COFFEE_RESUME_DATA: ResumeData = {
       company: "Wimbledon, Championships",
       link: "https://www.wimbledon.com/",
       badges: ["Team Lead"],
-      title: "Catering & Hospitality Team Lead",
+      title: "Media Bar & Restaurant Team Lead",
       start: "Jul 2018",
       end: "Jul 2021",
       description:
-        "Led a front-of-house team delivering meals, tea and coffee service for players, high-profile guests and on-site staff throughout The Championships. Ran shift rotas and daily briefings, coordinated orders across multiple service points, and kept service on time through peak periods. Trained new starters, handled dietary requirements and individual client requests directly, and maintained stock, presentation and hygiene standards in a fast-paced environment.",
+        "Ran the media bar and restaurant throughout The Championships, serving press, players and high-profile guests. Managed staffing and shift rotas, placed and tracked orders, controlled stock, and kept service moving through peak periods. Trained new starters and handled guest requests directly in a fast-paced, high-volume environment.",
     },
   ],
   skills: [
