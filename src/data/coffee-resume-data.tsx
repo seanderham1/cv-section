@@ -47,22 +47,11 @@ export const COFFEE_RESUME_DATA: ResumeData = {
       company: "The Adare Collection",
       link: "https://theadarecollection.com/",
       badges: ["Remote"],
-      roles: [
-        {
-          title: "Lead Web Designer",
-          start: "Aug 2025",
-          end: null,
-          description:
-            "Lead technical ownership of theadarecollection.com — interactive property maps, virtual tours, SEO with structured data, and ongoing deployment on Firebase Hosting. Technologies: React, TypeScript, Vite, Express, Tailwind CSS, Firebase",
-        },
-        {
-          title: "Web Designer",
-          start: "Mar 2025",
-          end: "Jul 2025",
-          description:
-            "Built the luxury accommodation platform for Ryder Cup 2027 from the ground up — site framework, property catalogue, page templates, and enquiry foundations. Technologies: React, TypeScript, Vite, Tailwind CSS, Firebase",
-        },
-      ],
+      title: "Lead Web Designer",
+      start: "Mar 2025",
+      end: null,
+      description:
+        "Built the luxury accommodation platform for Ryder Cup 2027 from the ground up, and now lead it technically — interactive property maps, virtual tours, SEO, and deployment. Technologies: React, TypeScript, Vite, Express, Tailwind CSS, Firebase",
     },
     {
       company: "Truth Creative",
