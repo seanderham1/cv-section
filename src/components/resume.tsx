@@ -72,6 +72,9 @@ export function Resume({
   forcePageBreak = true,
   showAvatar = true,
 }: ResumeProps) {
+  // Without the photo the header text can use the full column width.
+  const headerTextWidth = showAvatar ? "max-w-md" : "max-w-none";
+
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16">
       <IframeResizer />
@@ -79,10 +82,10 @@ export function Resume({
         <div className="flex items-center justify-between print:items-start print:gap-5">
           <div className="min-w-0 flex-1 space-y-1.5 print:space-y-1">
             <h1 className="text-2xl font-bold print:text-2xl print:leading-tight">{data.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground print:max-w-[calc(100%-0.5rem)] print:pr-4 print:text-sm print:leading-snug">
+            <p className={`${headerTextWidth} text-pretty font-mono text-sm text-muted-foreground print:max-w-[calc(100%-0.5rem)] print:pr-4 print:text-sm print:leading-snug`}>
               {data.about}
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+            <p className={`${headerTextWidth} items-center text-pretty font-mono text-xs text-muted-foreground`}>
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={data.locationLink}
