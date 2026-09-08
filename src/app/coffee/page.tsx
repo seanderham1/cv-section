@@ -14,7 +14,6 @@ export default function CoffeePage() {
       data={COFFEE_RESUME_DATA}
       showProjects={false}
       forcePageBreak={false}
-      showAvatar={false}
     />
   );
 }
