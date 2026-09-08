@@ -62,12 +62,15 @@ interface ResumeProps {
   showProjects?: boolean;
   /** Force Education onwards onto a second page when printing. */
   forcePageBreak?: boolean;
+  /** Render the profile photo in the header. */
+  showAvatar?: boolean;
 }
 
 export function Resume({
   data,
   showProjects = true,
   forcePageBreak = true,
+  showAvatar = true,
 }: ResumeProps) {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16">
@@ -147,14 +150,16 @@ export function Resume({
             </div>
           </div>
 
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={data.avatarUrl}
-            alt={data.name}
-            width={112}
-            height={112}
-            className="size-28 shrink-0 rounded-xl object-cover print:size-24"
-          />
+          {showAvatar ? (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={data.avatarUrl}
+              alt={data.name}
+              width={112}
+              height={112}
+              className="size-28 shrink-0 rounded-xl object-cover print:size-24"
+            />
+          ) : null}
         </div>
         <Section className="print:gap-y-1.5">
           <h2 className="text-xl font-bold print:text-lg">About</h2>
