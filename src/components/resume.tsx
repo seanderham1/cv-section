@@ -60,6 +60,8 @@ interface ResumeProps {
   data: ResumeData;
   /** Render the Projects section. */
   showProjects?: boolean;
+  /** Render the Skills section. */
+  showSkills?: boolean;
   /** Force Education onwards onto a second page when printing. */
   forcePageBreak?: boolean;
   /** Render the profile photo in the header. */
@@ -69,6 +71,7 @@ interface ResumeProps {
 export function Resume({
   data,
   showProjects = true,
+  showSkills = true,
   forcePageBreak = true,
   showAvatar = true,
 }: ResumeProps) {
@@ -270,18 +273,20 @@ export function Resume({
               );
             })}
           </Section>
-          <Section id="cv-skills" className="print:gap-y-1.5">
-            <h2 className="text-xl font-bold print:text-lg">Skills</h2>
-            <div className="flex flex-wrap gap-1 print:gap-1">
-              {data.skills.map((skill) => {
-                return (
-                  <Badge className="print:px-1.5 print:py-0 print:text-[10px]" key={skill}>
-                    {skill}
-                  </Badge>
-                );
-              })}
-            </div>
-          </Section>
+          {showSkills ? (
+            <Section id="cv-skills" className="print:gap-y-1.5">
+              <h2 className="text-xl font-bold print:text-lg">Skills</h2>
+              <div className="flex flex-wrap gap-1 print:gap-1">
+                {data.skills.map((skill) => {
+                  return (
+                    <Badge className="print:px-1.5 print:py-0 print:text-[10px]" key={skill}>
+                      {skill}
+                    </Badge>
+                  );
+                })}
+              </div>
+            </Section>
+          ) : null}
 
           {showProjects ? (
             <Section id="cv-projects" className="print:gap-y-1.5">

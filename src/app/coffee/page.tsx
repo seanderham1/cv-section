@@ -13,6 +13,7 @@ export default function CoffeePage() {
     <Resume
       data={COFFEE_RESUME_DATA}
       showProjects={false}
+      showSkills={false}
       forcePageBreak={false}
     />
   );
