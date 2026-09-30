@@ -91,11 +91,18 @@
     width: 100% !important;
   }
 
+  /* Natural pagination — do not force a blank page before trailing sections */
   #cv-page-2 {
-    break-before: page;
-    page-break-before: always;
+    break-before: auto;
+    page-break-before: auto;
     margin-top: 0 !important;
     padding-top: 0 !important;
+  }
+
+  /* Keep job cards from splitting awkwardly across pages when possible */
+  #cv-work .cv-print-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   #cv-work .cv-print-card:last-child {

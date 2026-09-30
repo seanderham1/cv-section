@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <Resume data={RESUME_DATA} showProjects={false} />;
+  return <Resume data={RESUME_DATA} showProjects={false} forcePageBreak={false} />;
 }
