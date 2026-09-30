@@ -11,6 +11,7 @@ type Role = {
   start: string;
   end?: string | null;
   description?: string;
+  bullets?: readonly string[];
 };
 
 type WorkBase = {
@@ -48,6 +49,7 @@ export type ResumeData = {
   }[];
   work: readonly WorkEntry[];
   skills: readonly string[];
+  personalProjects?: string;
   projects: readonly {
     title: string;
     techStack: readonly string[];
@@ -185,6 +187,7 @@ export function Resume({
                     start: work.start,
                     end: work.end,
                     description: work.description,
+                    bullets: "bullets" in work ? work.bullets : undefined,
                   },
                 ];
 
@@ -240,6 +243,15 @@ export function Resume({
                           {role.description}
                         </CardContent>
                       ) : null}
+                      {role.bullets?.length ? (
+                        <CardContent className="mt-2 p-0 print:mt-1.5 print:text-sm print:leading-snug">
+                          <ul className="list-disc space-y-1 pl-4 font-mono text-sm text-muted-foreground">
+                            {role.bullets.map((bullet) => (
+                              <li key={bullet}>{bullet}</li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      ) : null}
                     </div>
                   ))}
                 </CardHeader>
@@ -251,6 +263,14 @@ export function Resume({
           id={forcePageBreak ? "cv-page-2" : undefined}
           className="space-y-8 print:space-y-3"
         >
+          {data.personalProjects ? (
+            <Section className="print:gap-y-1.5">
+              <h2 className="text-xl font-bold print:text-lg">Personal Projects</h2>
+              <p className="text-pretty font-mono text-sm text-muted-foreground print:text-sm print:leading-snug">
+                {data.personalProjects}
+              </p>
+            </Section>
+          ) : null}
           <Section className="print:gap-y-1.5">
             <h2 className="text-xl font-bold print:text-lg">Education</h2>
             {data.education.map((education) => {
@@ -275,7 +295,7 @@ export function Resume({
           </Section>
           {showSkills ? (
             <Section id="cv-skills" className="print:gap-y-1.5">
-              <h2 className="text-xl font-bold print:text-lg">Skills</h2>
+              <h2 className="text-xl font-bold print:text-lg">Skills &amp; Software</h2>
               <div className="flex flex-wrap gap-1 print:gap-1">
                 {data.skills.map((skill) => {
                   return (
