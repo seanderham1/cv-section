@@ -13,7 +13,7 @@ export const RESUME_DATA: ResumeData = {
   initials: "SD",
   location: "London · Available immediately",
   locationLink: "https://seanderham.com/",
-  about: "Motion Designer",
+  about: "Designer",
   summary:
     "Motion designer with four years delivering branded and educational video for clients, from concept through shoot and final delivery. I build motion graphics and 3D in After Effects and Cinema 4D, edit and grade in Premiere Pro and DaVinci Resolve, and can take a piece from green screen capture to a finished composite. Comfortable leading small-crew shoots when the work needs it, then owning the cut, graphics and client amends through to export. Founder of keymotion.ai, an AI motion graphics editor built for editors.",
   avatarUrl: `${cvBasePath}/profile.jpg`,
