@@ -5,6 +5,12 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/project-card";
 import { IframeResizer } from "@/components/iframe-resizer";
+import type { ReactNode } from "react";
+
+type BulletGroup = {
+  label: string;
+  bullets: readonly string[];
+};
 
 type Role = {
   title: string;
@@ -12,6 +18,7 @@ type Role = {
   end?: string | null;
   description?: string;
   bullets?: readonly string[];
+  groups?: readonly BulletGroup[];
 };
 
 type WorkBase = {
@@ -29,7 +36,7 @@ export type ResumeData = {
   location: string;
   locationLink: string;
   about: string;
-  summary: string;
+  summary: ReactNode;
   avatarUrl: string;
   personalWebsiteUrl?: string;
   contact: {
@@ -68,6 +75,50 @@ interface ResumeProps {
   forcePageBreak?: boolean;
   /** Render the profile photo in the header. */
   showAvatar?: boolean;
+}
+
+function formatDates(start: string, end?: string | null) {
+  return `${start} – ${end ?? "present"}`;
+}
+
+function RoleDetails({ role }: { role: Role }) {
+  if (role.groups?.length) {
+    return (
+      <CardContent className="mt-2 space-y-3 p-0 print:mt-1.5 print:space-y-2 print:text-sm print:leading-snug">
+        {role.groups.map((group) => (
+          <div key={group.label}>
+            <p className="mb-1 font-mono text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              {group.label}
+            </p>
+            <ul className="list-disc space-y-1 pl-4 font-mono text-sm text-muted-foreground">
+              {group.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </CardContent>
+    );
+  }
+
+  return (
+    <>
+      {role.description ? (
+        <CardContent className="mt-2 p-0 print:mt-1.5 print:text-sm print:leading-snug">
+          {role.description}
+        </CardContent>
+      ) : null}
+      {role.bullets?.length ? (
+        <CardContent className="mt-2 p-0 print:mt-1.5 print:text-sm print:leading-snug">
+          <ul className="list-disc space-y-1 pl-4 font-mono text-sm text-muted-foreground">
+            {role.bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+        </CardContent>
+      ) : null}
+    </>
+  );
 }
 
 export function Resume({
@@ -170,7 +221,7 @@ export function Resume({
           ) : null}
         </div>
         <Section className="print:gap-y-1.5">
-          <h2 className="text-xl font-bold print:text-lg">About</h2>
+          <h2 className="text-xl font-bold print:text-lg">Profile</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground print:text-sm print:leading-snug">
             {data.summary}
           </p>
@@ -188,6 +239,7 @@ export function Resume({
                     end: work.end,
                     description: work.description,
                     bullets: "bullets" in work ? work.bullets : undefined,
+                    groups: "groups" in work ? work.groups : undefined,
                   },
                 ];
 
@@ -218,7 +270,7 @@ export function Resume({
                     </h3>
                     {!hasMultipleRoles ? (
                       <div className="text-sm tabular-nums text-gray-500">
-                        {roles[0].start} - {roles[0].end ?? "Present"}
+                        {formatDates(roles[0].start, roles[0].end)}
                       </div>
                     ) : null}
                   </div>
@@ -234,24 +286,11 @@ export function Resume({
                         </h4>
                         {hasMultipleRoles ? (
                           <div className="text-sm tabular-nums text-gray-500">
-                            {role.start} - {role.end ?? "Present"}
+                            {formatDates(role.start, role.end)}
                           </div>
                         ) : null}
                       </div>
-                      {role.description ? (
-                        <CardContent className="mt-2 p-0 print:mt-1.5 print:text-sm print:leading-snug">
-                          {role.description}
-                        </CardContent>
-                      ) : null}
-                      {role.bullets?.length ? (
-                        <CardContent className="mt-2 p-0 print:mt-1.5 print:text-sm print:leading-snug">
-                          <ul className="list-disc space-y-1 pl-4 font-mono text-sm text-muted-foreground">
-                            {role.bullets.map((bullet) => (
-                              <li key={bullet}>{bullet}</li>
-                            ))}
-                          </ul>
-                        </CardContent>
-                      ) : null}
+                      <RoleDetails role={role} />
                     </div>
                   ))}
                 </CardHeader>
@@ -271,6 +310,16 @@ export function Resume({
               </p>
             </Section>
           ) : null}
+          {showSkills ? (
+            <Section id="cv-skills" className="print:gap-y-1.5">
+              <h2 className="text-xl font-bold print:text-lg">Skills &amp; Software</h2>
+              <ul className="list-disc space-y-1 pl-4 font-mono text-sm text-muted-foreground print:text-sm print:leading-snug">
+                {data.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+            </Section>
+          ) : null}
           <Section className="print:gap-y-1.5">
             <h2 className="text-xl font-bold print:text-lg">Education</h2>
             {data.education.map((education) => {
@@ -282,7 +331,7 @@ export function Resume({
                         {education.school}
                       </h3>
                       <div className="text-sm tabular-nums text-gray-500">
-                        {education.start} - {education.end}
+                        {education.start} – {education.end}
                       </div>
                     </div>
                   </CardHeader>
@@ -293,20 +342,6 @@ export function Resume({
               );
             })}
           </Section>
-          {showSkills ? (
-            <Section id="cv-skills" className="print:gap-y-1.5">
-              <h2 className="text-xl font-bold print:text-lg">Skills &amp; Software</h2>
-              <div className="flex flex-wrap gap-1 print:gap-1">
-                {data.skills.map((skill) => {
-                  return (
-                    <Badge className="print:px-1.5 print:py-0 print:text-[10px]" key={skill}>
-                      {skill}
-                    </Badge>
-                  );
-                })}
-              </div>
-            </Section>
-          ) : null}
 
           {showProjects ? (
             <Section id="cv-projects" className="print:gap-y-1.5">

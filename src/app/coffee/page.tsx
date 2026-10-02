@@ -4,7 +4,7 @@ import { Resume } from "@/components/resume";
 
 export const metadata: Metadata = {
   title: `${COFFEE_RESUME_DATA.name} | CV`,
-  description: COFFEE_RESUME_DATA.summary,
+  description: String(COFFEE_RESUME_DATA.summary),
   robots: { index: false, follow: false },
 };
 
